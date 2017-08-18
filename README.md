@@ -1,9 +1,9 @@
 # laravel-goodies
-My collection of Laravel snippets/goodies/tricks/tips
+My collection of Laravel snippets/goodies/tricks/tips feel free to add some...
 
 - [Events](#events)
 - [Add Whoops error handler](#whoops)
-- [Use webpack with different public path+shared hosting](#webpack)
+- [Use webpack with different public path (or shared hosting)](#webpack)
 - [Trusted proxies without any packages](#proxies)
 
 
