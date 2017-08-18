@@ -4,6 +4,7 @@ My collection of Laravel snippets/goodies/tricks/tips
 -[Events](#events)
 - [Add Whoops error handler](#whoops)
 - [Use webpack with different public path+shared hosting](#webpack)
+- [Trusted proxies without any packages](#proxies)
 
 
 ## Events
@@ -102,4 +103,12 @@ public_html/
  ls -al ./public #check it
  ```
  
-    
+## Proxies
+Sometimes trusted proxy packages like fideloper/TrustedProxy cant help you, because you need to register trusted proxies earlier. Without any package you can do it in AppServiceProvider, so trusted proxies will be registered before middleware and just with 2 lines of code:
+```php
+ public function register()
+    {
+        $request=$this->app->make('request');
+        $request->setTrustedProxies(['proxy ip']);
+        //...
+```
